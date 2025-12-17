@@ -1,0 +1,17 @@
+version: "3.8"
+
+networks:
+  aurix-network:
+    driver: bridge
+
+services:
+  aurix:
+    # container_name: ${IMAGE_NAME}
+    # image: ${DOCKER_HUB_USERNAME}/${IMAGE_NAME}:${VERSION}
+    ports:
+      - "8082:80"
+    networks:
+      - aurix-network
+    # env_file:
+    #   - .env
+    #   - .env.${ENVIRONMENT}
