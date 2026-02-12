@@ -2,7 +2,7 @@ name: Deploy to Dev (Aurix)
 
 on:
   push:
-    branches: ["develop", "feature/*"]
+    branches: ["dev", "feature/*", "bugfix/*", "chore/*"]
     paths:
       - "src/**"
       - "public/**"

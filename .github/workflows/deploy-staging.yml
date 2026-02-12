@@ -2,7 +2,7 @@ name: Deploy to Staging (Aurix)
 
 on:
   push:
-    branches: ["staging"]
+    branches: ["release/*", "staging"]
     paths:
       - "src/**"
       - "public/**"

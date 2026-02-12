@@ -3,6 +3,8 @@ name: Deploy to Production (Aurix)
 on:
   release:
     types: [published]
+  push:
+    tags: ["v*"]
   workflow_dispatch:
     branches: ["main"]
 
