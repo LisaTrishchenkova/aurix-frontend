@@ -1,17 +1,16 @@
-version: "3.8"
-
 networks:
   aurix-network:
     driver: bridge
 
 services:
   aurix:
-    # container_name: ${IMAGE_NAME}
-    # image: ${DOCKER_HUB_USERNAME}/${IMAGE_NAME}:${VERSION}
+    container_name: aurix
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - .env
     ports:
-      - "8082:80"
+      - "5001:80"
     networks:
       - aurix-network
-    # env_file:
-    #   - .env
-    #   - .env.${ENVIRONMENT}
